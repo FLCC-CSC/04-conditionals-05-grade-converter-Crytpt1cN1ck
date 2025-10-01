@@ -1,8 +1,8 @@
 # FILE NAME - grade_converter.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Nicholas Sheppard
+# DATE: 09/30/2025
+# BRIEF DESCRIPTION:  This program will convert a student's grade percentage to a grade letter.
 
 
 
@@ -15,22 +15,28 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-print('===== Grade Converter =====')
+def main():
+    grade_converter()
 
-percent = int(input('Enter a numerical grade (1-100): '))
+def grade_converter():
+    print('===== Grade Converter =====')
 
-if percent > 100:
-    print('A+')
-elif percent >= 90:
-    print('A')
-elif percent >= 80:
-    print('B')
-elif percent >= 70:
-    print('C')
-elif percent >= 65:
-    print('D')
-else:
-    print('F')
+    percent = int(input('Enter a numerical grade (1-100): '))
+
+    if percent > 100:
+        print('A+')
+    elif percent >= 90:
+        print('A')
+    elif percent >= 80:
+        print('B')
+    elif percent >= 70:
+        print('C')
+    elif percent >= 65:
+        print('D')
+    else:
+        print('F')
+
+main()
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -85,7 +91,10 @@ D
 1. What is something you would tell a future student to be careful about when
    doing this lab?
 
-
+Make sure you don't reverse the 'if elseif else' statements. Otherwise it will always
+give an unexpected result. For instance, if you calculate the letter grade of D first, it'll
+check to see if the number is >= 65. The issue is that it will produce a D for ALL numbers over
+65, then stop executing the code.
 
 
 
